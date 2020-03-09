@@ -1,32 +1,49 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <transition>
+      <router-view />
+    </transition>
   </div>
 </template>
 
 <style>
+@import url('https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font: inherit;
+}
+input,
+select,
+button {
+  font: inherit;
+}
+html,
+body {
+  height: 100%;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  height: 100%;
+  overflow: hidden;
 }
 </style>
